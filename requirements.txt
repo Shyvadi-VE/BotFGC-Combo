@@ -1,0 +1,12 @@
+# Django Core
+Django>=5.1,<5.2
+
+# PostgreSQL Database Adapter (Psycopg 3)
+psycopg[binary]>=3.2.0
+
+# Environment variables & Database URL helper
+python-dotenv>=1.0.0
+dj-database-url>=2.2.0
+
+# Production WSGI Server (Linux/Docker)
+gunicorn>=23.0.0; sys_platform != "win32"
