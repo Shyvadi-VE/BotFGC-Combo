@@ -43,17 +43,20 @@ class Combo(models.Model):
     # Cardinalidad: N:1 (Muchos combos pertenecen a 1 parche específico)
     patch = models.ForeignKey(
         'catalog.Patch',
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        related_name='combos'
     )
     # Cardinalidad: N:1 (Muchos combos requieren 1 posición en pantalla)
     position = models.ForeignKey(
         'catalog.Position',
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        related_name='combos'
     )
     # Cardinalidad: N:1 (Muchos combos son creados por 1 autor/usuario)
     author = models.ForeignKey(
         settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        related_name='combos'
     )
 
     # Relaciones Many-to-Many (Cardinalidad N:M)

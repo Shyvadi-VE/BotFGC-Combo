@@ -10,3 +10,7 @@ dj-database-url>=2.2.0
 
 # Production WSGI Server (Linux/Docker)
 gunicorn>=23.0.0; sys_platform != "win32"
+
+# Django REST Framework
+djangorestframework>=3.15.0
+django-filter>=24.0
